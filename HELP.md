@@ -23,3 +23,18 @@ These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
+### Routes
+
+## Index:
+* http://localhost:8080/
+* http://localhost:8080/about
+
+## Payments:
+* http://localhost:8080/monthly-payments
+* http://localhost:8080/monthly-payments/{id}
+
+## User Data:
+* http://localhost:8080/user  http://localhost:8080/user/profile
+
+## Manager:
+* http://localhost:8080/manager http://localhost:8080/manager/dahsboard
