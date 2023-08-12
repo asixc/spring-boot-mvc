@@ -12,7 +12,7 @@ import java.util.Map;
 public class IndexController {
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(final Model model) { // Usando Modelo
         model.addAllAttributes(Map.of(
                 "title", "Comunidad",
                 "metaDescription", "Gestión integral de la comunidad"
@@ -21,4 +21,17 @@ public class IndexController {
 
         return "index";
     }
+
+    @GetMapping("/about")
+    public String getAbout(final Map<String, Object> map) { // Usando Map directamente
+        map.putAll(Map.of(
+                "title", "Sobre esta web",
+                "metaDescription", "Gestión integral de la comunidad"
+                )
+        );
+
+        return "about";
+    }
+
+
 }

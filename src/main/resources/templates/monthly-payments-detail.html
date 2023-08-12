@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="next-size-adjust">
+    <title th:text="${title}"></title>
+    <meta name="description" th:content="${metaDescription}" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <header>
+        <h1 th:text="${title}">
+            <span th:text="${paymentId}"></span>
+        </h1>
+        <h2 th:text="${paymentId}"></h2>
+    </header>
+</body>
+</html>
