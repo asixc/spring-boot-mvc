@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="next-size-adjust">
-    <title>Comunidad</title>
-    <meta name="description" content="Gestión integra de la comunidad">
+    <title th:text="${title}"></title>
+    <meta name="description" th:content="${metaDescription}" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
