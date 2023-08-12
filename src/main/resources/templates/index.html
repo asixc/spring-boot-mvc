@@ -6,11 +6,36 @@
     <title th:text="${title}"></title>
     <meta name="description" th:content="${metaDescription}" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
     <header>
         <h1>Hola</h1>
     </header>
+    <main>
+        <h2>Ejemplo de insertar imágen</h2>
+        <img th:src="@{/images/image_test.png}" alt="Imagen de ejemplo">
+        <!--
+        <img alt="Edificio visto desdes abajo" title="Edificio visto desde abajo"
+             fetchpriority="high" decoding="async" data-nimg="fill"
+             sizes="(min-width: 840px) 29vw, (min-width: 600px) 46vw, 95vw"
+             srcset="https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=96&amp;imdensity=1 96w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=128&amp;imdensity=1 128w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=256&amp;imdensity=1 256w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=320&amp;imdensity=1 320w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=384&amp;imdensity=1 384w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=640&amp;imdensity=1 640w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=768&amp;imdensity=1 768w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=1024&amp;imdensity=1 1024w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=1280&amp;imdensity=1 1280w,
+              https://shop.mango.com/cms-assets/v3/assets/blt351b9b24ac05a648/bltba28fe6e7c75de05/64abf09673a7dd4e225a7aab/chica-vestido-crochet-playa.jpg?imwidth=1536&amp;imdensity=1 1536w"
+             th:src="@{/images/image_test.png}">
+              -->
+        <img th:attr="srcset=|@{/images/image_test_50.webp} 1x, @{/images/image_test_50_600.webp} 2x, @{/images/image_test_50_600.webp} 3x|"
+             th:src="@{/img/image1x.png}"
+             alt="Edificio visto desdes abajo"
+             title="Edificio visto desde abajo" />
+
+    </main>
 </body>
 </html>
