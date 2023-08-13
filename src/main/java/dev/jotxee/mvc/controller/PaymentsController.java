@@ -4,16 +4,20 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
 
 @Slf4j
 @Controller
+@RequestMapping("/monthly-payments")
+
 public class PaymentsController {
 
-    @GetMapping("/monthly-payments")
+    @GetMapping({"", "/"})
     public String getMonthlyPayments(final ModelMap modelMap) { // Usando ModelMap
         modelMap.addAllAttributes(Map.of(
                         "title", "Histórico de pagos",
@@ -24,7 +28,7 @@ public class PaymentsController {
         return "monthly-payments";
     }
 
-    @GetMapping("/monthly-payments/{id}")
+    @GetMapping("/{id}")
     public ModelAndView getMonthlyPaymentDetails(final ModelAndView modelView, @PathVariable final String id) { // Usando ModelAndView
         modelView.addAllObjects(Map.of(
                         "title", "Detalle del pago",

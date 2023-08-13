@@ -22,6 +22,24 @@ public class IndexController {
         return "index";
     }
 
+    /** Login form. */
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    /** Login form. */
+    @GetMapping("/register")
+    public String register() {
+        return "registerForm";
+    }
+
+    /** Error page. */
+    @GetMapping("/login-error")
+    public String loginError() {
+        return "login-error";
+    }
+
     @GetMapping("/about")
     public String getAbout(final Map<String, Object> map) { // Usando Map directamente
         map.putAll(Map.of(
